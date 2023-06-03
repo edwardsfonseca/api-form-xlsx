@@ -130,7 +130,7 @@ function App() {
                       {filterHistory.map((filter, index) => (
                         <div key={index}>
                           <div className='bodyp' >
-                            <strong  >Docuemnto Filtrado :  <p className='result-filter' >{filter.filterField} {filter.filterOperator} {filter.filterValue}</p></strong>
+                            <strong  >Documento Filtrado :  <p className='result-filter' >{filter.filterField} {filter.filterOperator} {filter.filterValue}</p></strong>
                             <button className='btn-filter' onClick={() => handleFilterHistoryClick(index, filterHistory, setFilterHistory)}>Volver a filtrar</button>
                           </div>
                           <hr className="line" />
