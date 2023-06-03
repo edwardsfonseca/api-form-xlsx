@@ -1,0 +1,211 @@
+* {
+  
+  
+font-family: 'Inconsolata', monospace;
+}
+
+
+
+.nav .navbar-cart button {
+  background-color: #c7940a;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.modal-overlay {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: #6f6969;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  height: 93%;
+  width: 40%;
+  max-width: 581px;
+  top: -17%;
+  left: 35%;
+  display: block;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-header h2 {
+  margin-top: 0;
+}
+
+.cerrar {
+  font-size: 24px;
+  font-weight: bold;
+  color: #aaa;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.cerrar:hover {
+  color: #000;
+}
+
+.producto {
+ 
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.producto .nombre {
+  font-weight: bold;
+}
+
+.producto .precio {
+  color: #4285f4;
+}
+
+.eliminar {
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.eliminar:hover {
+  background-color: #d32f2f;
+}
+
+.line {
+  margin: 0px 0px 21px 0px;
+}
+ul{
+  list-style:none;
+  }
+.total {
+  display: block;
+  position: relative;
+
+  top: 7rem;
+}
+
+
+
+.nav-link {
+  FONT-SIZE: 21px;
+  margin: 5px 3px 5px 3px;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-item {
+  margin-left: 24px;
+  margin-top: 20px;
+}
+
+:root {
+  --main-color: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 34.06%, rgba(0, 0, 0, 0.105213) 60.1%, rgba(0, 0, 0, 0.0942249) 67.92%, rgba(0, 0, 0, 0) 100%), linear-gradient(180deg, rgba(7, 118, 32, 0.61) 48.13%, rgba(7, 118, 32, 0) 56.46%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.navbar-brand {
+  color: var(--main-color);
+  FONT-SIZE: 21px;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  border-right: 2px solid var(--main-color);
+  overflow: hidden;
+  white-space: pre-wrap;
+  animation: control-width 2s steps(25) both, blink 0.5s infinite;
+  position: absolute;
+  top: 40px;
+  left: 25px;
+}
+
+.collapse {
+  display: flex;
+}
+
+.navbar-nav {
+  display: contents;
+}
+
+.list {
+  display: contents;
+}
+.bodyp{
+  display: flex;
+  align-content: space-around;
+  justify-content: space-between;
+}
+.btnpadre{
+  display: flex;
+  margin: 17px;
+  padding: 15px;
+  position: relative;
+}
+.btnhistory{
+  position: absolute;
+  left: 20rem;
+
+}
+.cdnbody{
+  display: flex;
+  margin-top: 100px;
+}
+.cdn{
+  margin-left: 27px;
+  font-size: 21px;
+}
+.tbody{
+  background: #000;
+}
+.tr{
+  text-align: center;
+}
+.trkey{
+  background:dimgrey;
+}
+.optn{
+  font-size: 18px;
+}
+#filterOperator{
+  height: 27px;
+}
+#filterField{
+  height: 27px;
+}
+#filterValue{
+  height: 27px;
+}
+.btn-borrar{
+  margin-left: 30px;
+}
+.result-filter{
+  font-family: sans-serif;
+}
+.btn-filter{
+  height: 57px;
+  width: 7rem;
+  border: none;
+}
