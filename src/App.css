@@ -152,7 +152,7 @@ font-family: 'Inconsolata', monospace;
   padding: 20px;
 }
 .count{
-  margin-bottom : 20px;
+  display: flex;
 }
 select{
   font-family: circular;

@@ -8,7 +8,7 @@ import {
   handleOperatorChange,
   handleValueChange,
   handleFilterClick,
-  handleFilterHistoryClick
+  
 } from './dataUtils';
 import Swal from 'sweetalert2'
 function App() {
@@ -81,6 +81,19 @@ function App() {
     setFilterHistory([]);
     localStorage.removeItem('filterHistory');
   };
+  
+  const handleFilterHistoryClick = (index, filterHistory) => {
+    const selectedFilter = filterHistory[index];
+    setFilterField(selectedFilter.filterField);
+    setFilterOperator(selectedFilter.filterOperator);
+    setFilterValue(selectedFilter.filterValue);
+  
+    // Filtra los datos utilizando el filtro seleccionado solamente
+    const filtered = filterData(jsonData, [selectedFilter]);
+    setFilteredData(filtered);
+    setResultCount(filtered.length);
+  };
+  
 
   return (
     <>
@@ -250,8 +263,6 @@ function App() {
             </Link>
           </div>
         </div>
-
-
         {/* /------------------------------------------------Hacia Abajo Tenemos La vista TABLA---------------------------------------------------------/ */}
         <div className='count'> <h1>Archivos Actuales: {resultCount}</h1> </div>
         {filterHistory.length > 0 && filteredData.length > 0 ? (

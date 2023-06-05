@@ -8,7 +8,7 @@ import {
     handleOperatorChange,
     handleValueChange,
     handleFilterClick,
-    handleFilterHistoryClick
+    
 } from './dataUtils';
 
 function App2() {
@@ -59,7 +59,17 @@ function App2() {
         setFilterHistory([]);
         localStorage.removeItem('filterHistory');
     };
-
+    const handleFilterHistoryClick = (index, filterHistory) => {
+        const selectedFilter = filterHistory[index];
+        setFilterField(selectedFilter.filterField);
+        setFilterOperator(selectedFilter.filterOperator);
+        setFilterValue(selectedFilter.filterValue);
+      
+        // Filtra los datos utilizando el filtro seleccionado solamente
+        const filtered = filterData(jsonData, [selectedFilter]);
+        setFilteredData(filtered);
+        setResultCount(filtered.length);
+      };
     return (
         <>
 

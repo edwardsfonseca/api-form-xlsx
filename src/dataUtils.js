@@ -76,8 +76,13 @@ export const handleFilterClick = (
     }
 };
 
-// guardamos informacion en la historia de todos los filtros 
-export const handleFilterHistoryClick = (index, filterHistory, setFilterHistory) => {
-    const updatedHistory = filterHistory.slice(0, index);
+// guardamos informacion en la historia de todos los filtros solo se aplica en componente app-2
+/* export const handleFilterHistoryClick = (index, filterHistory, setFilterHistory) => {
+  const updatedHistory = filterHistory.slice(0, index + 1);
+  const selectedFilter = updatedHistory[index];
+  if (selectedFilter) {
     setFilterHistory(updatedHistory);
+  }
 };
+
+ */
