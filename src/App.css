@@ -6,14 +6,6 @@ font-family: 'Inconsolata', monospace;
 
 
 
-.nav .navbar-cart button {
-  background-color: #c7940a;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 6px;
-  cursor: pointer;
-}
 
 .modal-overlay {
   position: fixed;
@@ -34,6 +26,7 @@ font-family: 'Inconsolata', monospace;
   padding: 20px;
   border: 1px solid #888;
   height: 93%;
+  overflow-y: auto;
   width: 40%;
   max-width: 581px;
   top: -17%;
@@ -53,105 +46,29 @@ font-family: 'Inconsolata', monospace;
 }
 
 .cerrar {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bold;
   color: #aaa;
-  background-color: transparent;
+  background: black;
   border: none;
   cursor: pointer;
 }
 
 .cerrar:hover {
-  color: #000;
+  color: #f7f7f7;
 }
-
-.producto {
- 
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.producto .nombre {
-  font-weight: bold;
-}
-
-.producto .precio {
-  color: #4285f4;
-}
-
-.eliminar {
-  background-color: #f44336;
-  color: #fff;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-.eliminar:hover {
-  background-color: #d32f2f;
-}
-
 .line {
   margin: 0px 0px 21px 0px;
 }
-ul{
-  list-style:none;
-  }
-.total {
-  display: block;
-  position: relative;
-
-  top: 7rem;
+.secondline {
+  margin: 0px 0px 21px 0px;
+  width: 175px;
+  margin-left: 123px;
 }
 
-
-
-.nav-link {
-  FONT-SIZE: 21px;
-  margin: 5px 3px 5px 3px;
-  font-family: 'Courier New', Courier, monospace;
-  color: white;
-  text-decoration: none;
-}
-
-.nav-item {
-  margin-left: 24px;
-  margin-top: 20px;
-}
-
-:root {
-  --main-color: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 34.06%, rgba(0, 0, 0, 0.105213) 60.1%, rgba(0, 0, 0, 0.0942249) 67.92%, rgba(0, 0, 0, 0) 100%), linear-gradient(180deg, rgba(7, 118, 32, 0.61) 48.13%, rgba(7, 118, 32, 0) 56.46%);
-}
 
 * {
   box-sizing: border-box;
-}
-
-.navbar-brand {
-  color: var(--main-color);
-  FONT-SIZE: 21px;
-  color: white;
-  font-family: 'Courier New', Courier, monospace;
-  border-right: 2px solid var(--main-color);
-  overflow: hidden;
-  white-space: pre-wrap;
-  animation: control-width 2s steps(25) both, blink 0.5s infinite;
-  position: absolute;
-  top: 40px;
-  left: 25px;
-}
-
-.collapse {
-  display: flex;
-}
-
-.navbar-nav {
-  display: contents;
-}
-
-.list {
-  display: contents;
 }
 .bodyp{
   display: flex;
@@ -208,4 +125,35 @@ ul{
   height: 57px;
   width: 7rem;
   border: none;
+}
+.btn-version{
+  position: absolute;
+  left: 31rem;
+
+}
+.btn-help{
+  position: absolute;
+  left: 41rem;
+
+}
+.sidebar {
+    height: 94vh;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+}
+
+.sidebar h1 {
+  margin-top: 0;
+}
+
+.main-content {
+  margin-left: 220px; /* Ajusta el valor según el ancho de la barra lateral */
+  padding: 20px;
+}
+.count{
+  margin-bottom : 20px;
+}
+select{
+  font-family: circular;
 }

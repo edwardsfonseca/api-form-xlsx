@@ -1,8 +1,8 @@
 import XLSX from 'xlsx';
-
+// Consumimos el archivo
 export const fetchData = async () => {
     try {
-        const response = await fetch('cartera.xlsx', { responseType: 'arraybuffer' });
+        const response = await fetch('cartera.xlsx');
         const buffer = await response.arrayBuffer();
         const workbook = XLSX.read(buffer, { type: 'array' });
         const worksheet = workbook.Sheets[workbook.SheetNames[0]];
@@ -13,19 +13,17 @@ export const fetchData = async () => {
         return [];
     }
 };
-
+// Una vez consumido aplicamos condicones para utilizar esos datos 
 export const filterData = (jsonData, filterHistory) => {
     if (filterHistory.length === 0) {
+
         return jsonData;
     }
-
     const lastFilter = filterHistory[filterHistory.length - 1];
     const { filterField, filterOperator, filterValue } = lastFilter;
-
-    const filtered = jsonData.filter((row) => {
-        const cellValue = String(row[filterField]);
+    const filtered = jsonData.filter((data) => {
+        const cellValue = String(data[filterField]);
         const filterNumericValue = parseFloat(filterValue);
-
         switch (filterOperator) {
             case '=':
                 return cellValue === filterValue;
@@ -44,19 +42,19 @@ export const filterData = (jsonData, filterHistory) => {
 
     return filtered;
 };
-
+// actulizamos los valores con el evento cada vez que hacemos click llamamos al target value de cada option 
 export const handleFieldChange = (e, setFilterField) => {
     setFilterField(e.target.value);
 };
-
+// actulizamos los valores con el evento cada vez que hacemos click llamamos al target value de cada option 
 export const handleOperatorChange = (e, setFilterOperator) => {
     setFilterOperator(e.target.value);
 };
-
+// actulizamos los valores con el evento cada vez que hacemos click llamamos al target value de cada option 
 export const handleValueChange = (e, setFilterValue) => {
     setFilterValue(e.target.value);
 };
-
+// filtramos la informacion seleccionada
 export const handleFilterClick = (
     filterField,
     filterOperator,
@@ -71,11 +69,15 @@ export const handleFilterClick = (
             filterValue,
         };
 
-        setFilterHistory((prevHistory) => [...prevHistory, newFilter]);
+        setFilterHistory((prevFilterHistory) => {
+            const updatedHistory = [...prevFilterHistory, newFilter];
+            return updatedHistory;
+        });
     }
 };
 
+// guardamos informacion en la historia de todos los filtros 
 export const handleFilterHistoryClick = (index, filterHistory, setFilterHistory) => {
-    const updatedHistory = filterHistory.slice(0, index + 1);
+    const updatedHistory = filterHistory.slice(0, index);
     setFilterHistory(updatedHistory);
 };
